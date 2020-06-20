@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:outlineSpotShadowColor="@color/shadow_card"
+        android:outlineAmbientShadowColor="@color/shadow_card"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="20dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        android:background="@color/white">
+
+
+        <!--Main layout of content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg">
+
+
+            <TextView
+                android:layout_margin="10dp"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-thin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card Validator"
+                android:textColor="@color/white"/>
+
+
+
+            <EditText
+                android:id="@+id/card_number_et"
+                android:inputType="number"
+                android:digits=" 1234567890"
+                android:maxLength="22"
+                android:hint="1234 5678 9012 3456"
+                android:drawableRight="@drawable/default_card"
+                android:layout_margin="20dp"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:background="@drawable/edittext_bg"/>
+
+
+
+
+            <!--Layout for Show details -->
+            <LinearLayout
+                android:id="@+id/layout_details"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <!--First horizontal layout -->
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:fontFamily="sans-serif-thin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card : "
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+
+                <TextView
+                    android:id="@+id/card_txt"
+                    android:paddingLeft="5dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VISA"
+                    android:textColor="@color/white"/>
+
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card Type : "
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:id="@+id/card_type_txt"
+                    android:fontFamily="sans-serif-thin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CREDIT"
+                    android:textColor="@color/white"/>
+
+
+
+            </LinearLayout>
+
+
+                <!--Second horizontal layout -->
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:fontFamily="sans-serif-thin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bank Name : "
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:id="@+id/bank_name_txt"
+                        android:fontFamily="sans-serif-thin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AXIS BANK, LTD."
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    
+
+
+    <!-- Button of submit -->
+    <Button
+        android:id="@+id/btn_submit"
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/button_bg"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
