@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Layout of details if get data successfully
-    LinearLayout layout_details;
+    static LinearLayout layout_details;
 
 
     //Progress Dialog
@@ -80,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
 
         //PERFORMING BUTTON CLICK FOR GETTING DATA
         btn_submit.setOnClickListener(view -> {
+
+
+            //Hiding details layout
+            layout_details.setVisibility(View.GONE);
 
             String number = card_number_et.getText().toString().replaceAll("\\s","");
             progressDialog.setMessage("Validating card...");

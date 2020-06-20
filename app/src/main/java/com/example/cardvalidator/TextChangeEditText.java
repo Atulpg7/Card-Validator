@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import static com.example.cardvalidator.MainActivity.btn_submit;
 import static com.example.cardvalidator.MainActivity.card_number_et;
+import static com.example.cardvalidator.MainActivity.layout_details;
 
 public class TextChangeEditText implements TextWatcher {
 
@@ -44,6 +45,11 @@ public class TextChangeEditText implements TextWatcher {
 
 
         int length=editable.length();
+
+
+        //Hiding Layout for details in main activity
+        if (length>0)
+            layout_details.setVisibility(View.GONE);
 
         //Enabling button when size reaches 16 (adding spaces also)
         if (editable.length() >= 19) {

@@ -12,9 +12,9 @@
     <androidx.cardview.widget.CardView
         android:outlineSpotShadowColor="@color/shadow_card"
         android:outlineAmbientShadowColor="@color/shadow_card"
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="8dp"
         app:cardUseCompatPadding="true"
@@ -23,8 +23,8 @@
 
         <!--Main layout of content -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
             android:orientation="vertical"
             android:background="@drawable/card_bg">
 
@@ -45,9 +45,10 @@
                 android:inputType="number"
                 android:digits=" 1234567890"
                 android:maxLength="22"
+                android:layout_marginTop="20dp"
                 android:hint="1234 5678 9012 3456"
                 android:drawableRight="@drawable/default_card"
-                android:layout_margin="20dp"
+                android:layout_marginLeft="20dp"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:padding="8dp"
@@ -58,8 +59,11 @@
 
             <!--Layout for Show details -->
             <LinearLayout
+                android:layout_marginLeft="15dp"
                 android:id="@+id/layout_details"
                 android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -120,7 +124,7 @@
 
                 <!--Second horizontal layout -->
                 <LinearLayout
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
